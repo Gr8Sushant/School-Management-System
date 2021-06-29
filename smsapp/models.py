@@ -12,14 +12,6 @@ class User(AbstractUser):
     last_name = models.CharField(max_length=150)
 
 
-class Admin(models.Model):
-
-    user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
-
-    admin_email = models.EmailField(max_length=254)
-    objects = models.Manager()
-
-
 class Student(models.Model):
 
     #one to one relationship with User  
