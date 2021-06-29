@@ -28,6 +28,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+#since we are using the custom User model,
+AUTH_USER_MODEL = 'smsapp.User'
+
 
 # Application definition
 
