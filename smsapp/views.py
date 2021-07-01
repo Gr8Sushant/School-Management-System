@@ -4,3 +4,7 @@ from django.shortcuts import render
 
 def loginPage(request):
     return render(request, 'smsapp/login.html')
+    
+
+def register(request):
+    return render(request, 'smsapp/register.html')
