@@ -15,7 +15,7 @@ class StudentSignUp(UserCreationForm):
     class Meta(UserCreationForm.Meta):
         model = User
     
-
+    
     @transaction.atomic
     def data_save(self):
         user = super().save(commit=False)

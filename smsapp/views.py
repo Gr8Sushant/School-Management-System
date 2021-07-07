@@ -1,5 +1,4 @@
-from .forms import StudentSignUp
-
+from .forms import StudentSignUp, TeacherSignUp
 from .models import User
 from django.shortcuts import render
 from django.views.generic import CreateView
@@ -21,5 +20,5 @@ class StudentRegister(CreateView):
 
 class TeacherRegister(CreateView):
     model = User
-    # form_class = TeacherSignUp
+    form_class = TeacherSignUp
     template_name = 'smsapp/teach_register.html'
