@@ -18,3 +18,8 @@ class StudentRegister(CreateView):
     model = User
     form_class = StudentSignUp
     template_name = 'smsapp/std_register.html'
+
+class TeacherRegister(CreateView):
+    model = User
+    # form_class = TeacherSignUp
+    template_name = 'smsapp/teach_register.html'
