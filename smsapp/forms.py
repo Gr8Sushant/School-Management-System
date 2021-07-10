@@ -24,6 +24,18 @@ class StudentSignUpForm(UserCreationForm):
         return user
 
 
+class TeacherSignUpForm(UserCreationForm):
+    class Meta(UserCreationForm.Meta):
+        model = User
+
+    def save(self, commit=True):
+        user = super().save(commit=False)
+        user.is_teacher = True
+        if commit:
+            user.save()
+        return user
+
+
 # class StudentSignUp(UserCreationForm):
 #     first_name = forms.CharField(required=True)
 #     last_name = forms.CharField(required=True)
