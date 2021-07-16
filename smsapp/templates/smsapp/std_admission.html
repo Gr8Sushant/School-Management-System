@@ -1,0 +1,70 @@
+{% load crispy_forms_tags %}
+
+<form method="POST" , enctype="multipart/form-data">
+	{%csrf_token%}
+	<div class="container">
+   
+
+        {{ form.username|as_crispy_field }}
+
+
+    <div class="form-row">
+	<div class="form-group col-md-6 mb-0">
+        {{ form.first_name|as_crispy_field }}
+    </div>
+ 
+      <div class="form-group col-md-6 mb-0">
+        {{ form.last_name|as_crispy_field }}
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6 mb-0">
+        {{ form.address|as_crispy_field }}
+      </div>
+       <div class="form-group col-md-6 mb-0">
+        {{ form.email|as_crispy_field }}
+      </div>
+      <div class="form-group col-md-6 mb-0">
+        {{ form.phone|as_crispy_field }}
+      </div>
+    </div>
+	  {{ form.parents_name|as_crispy_field }}
+ 
+    <button type="submit" class="btn btn-primary">Sign in</button>
+	</div>
+</form>
+
+
+
+
+
+
+<!-- 
+<form method="POST" , enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="your_name">username </label>
+    <input id="username" type="text" name="username" value="{{ username }}">
+
+    <label for="your_name">password </label>
+    <input id="password" type="password" name="password" value="{{ password }}">
+
+    <label for="your_name">First Name </label>
+    <input id="first_name" type="text" name="username" value="{{ first_name }}">
+
+    <label for="your_name">Last Name </label>
+    <input id="last_name" type="text" name="username" value="{{ last_name }}">
+
+    <label for="your_name">address </label>
+    <input id="address" type="text" name="username" value="{{ address }}">
+    
+    <label for="your_name">email </label>
+    <input id="email" type="email" name="username" value="{{ email }}">
+
+    <label for="your_name">Phone </label>
+    <input id="phone" type="number" name="username" value="{{ phone }}">
+
+    <label for="your_name">Parents Name </label>
+    <input id="parents_name" type="text" name="username" value="{{ parents_name }}">
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form> -->
