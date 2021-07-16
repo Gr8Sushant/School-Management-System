@@ -17,7 +17,7 @@
     </head>
     <body class="container">
         <h1 class="display-3 py-5">Student Registration</h1>
-        <form class="row g-3" action="#" method="POST" novalidate>
+        <form class="row g-3" action="{% url 'register' %}" method="POST" novalidate>
             {% csrf_token %}
             <div class="col-md-6">
               <label for="username" class="form-label">Username</label>
